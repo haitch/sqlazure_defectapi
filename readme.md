@@ -1,3 +1,8 @@
+# Summary
+
+Removing SQL AAD Admin could break running AAD based applications, cause an outage.
+
+# Reproduce steps
 1. create SQL azure with bicep
 ```bash
 az deployment group create -g <your ResourceGroup> --template-file azure-sql.bicep -n sql1 --parameters location=eastus aadAdminObjectId=<SQL AAD Admin ObjectId> aadAdminLogin=<SQL AAD Admin Email>
