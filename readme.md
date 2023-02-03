@@ -2,6 +2,10 @@
 
 Removing SQL AAD Admin could break running AAD based applications, cause an outage.
 
+Expected behavior:
+1. block AAD Admin removing if AAD based user in any database under this server.
+2. Or continue accept SPN token.
+
 # Reproduce steps
 1. create SQL azure with bicep
 ```bash
